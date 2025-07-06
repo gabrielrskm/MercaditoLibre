@@ -1,0 +1,129 @@
+Table Categorias {
+  ID INT [pk, increment]
+  Nombre NVARCHAR(100)
+  FechaBaja DATETIME
+}
+
+Table Marcas {
+  ID INT [pk, increment]
+  Nombre NVARCHAR(100)
+  FechaBaja DATETIME
+}
+
+Table Estado_envio {
+  ID INT [pk, increment]
+  Descripcion NVARCHAR(100)
+  FechaBaja DATETIME
+}
+
+Table Usuarios {
+  ID INT [pk, increment]
+  Nombre NVARCHAR(50)
+  Apellido NVARCHAR(50)
+  Email NVARCHAR(100) [unique, not null]
+  Password NVARCHAR(255) [not null]
+  ResetToken VARCHAR(100)
+  ResetTokenFecha DATETIME
+  Telefono NVARCHAR(20)
+  Direccion NVARCHAR(255)
+  Permisos INT [not null]
+  Fecha_alta DATETIME [not null, default: `GETDATE()`]
+  Fecha_baja DATETIME
+}
+
+Table Productos {
+  ID INT [pk, increment]
+  Nombre NVARCHAR(100)
+  Descripcion NVARCHAR(MAX)
+  Categoria_ID INT
+  Marca_ID INT
+  Precio DECIMAL(18,2)
+  Descuento DECIMAL(5,2)
+  Destacado BIT
+  FechaBaja DATETIME
+  StockDisponible INT [default: 0]
+  StockReservado INT [default: 0]
+}
+
+Table Ventas {
+  ID INT [pk, increment]
+  Usuario_ID INT
+  SumaTotal DECIMAL(18,2)
+  FechaVenta DATETIME
+  Estado INT [default: 0]
+}
+
+Table VentasProducto {
+  Venta_ID INT
+  Producto_ID INT
+  Cantidad INT
+  PrecioUnitario DECIMAL(18,2)
+
+  Indexes {
+    (Venta_ID, Producto_ID) [pk]
+  }
+}
+
+Table ItemCarrito {
+  ID INT [pk, increment]
+  Usuario_ID int
+  Producto_ID int
+  FechaAgregado DATETIME
+  Cantidad int
+  Vendido BIT
+  Cancelado BIT
+}
+
+Table Imagenes {
+  ID INT [pk, increment]
+  URI Text
+  Producto_ID INT
+  FechaBaja DATETIME
+}
+
+Table Favoritos {
+  Usuario_ID INT
+  Producto_ID INT
+
+  Indexes {
+    (Usuario_ID, Producto_ID) [pk]
+  }
+}
+
+Table Envios {
+  ID INT [pk, increment]
+  Venta_ID INT
+  Estado_envio_ID INT
+}
+
+Table MediosDePago {
+  Id INT [pk]
+  CBU VARCHAR(256)
+  Alias VARCHAR(256)
+  MercadoToken VARCHAR(256)
+}
+
+
+Ref FK_Productos_Categorias:Categorias.ID < Productos.Categoria_ID
+
+Ref FK_Productos_Marcas:Marcas.ID < Productos.Marca_ID
+
+Ref FK_Ventas_Usuarios:Usuarios.ID < Ventas.Usuario_ID
+
+Ref FK_VentasProducto_Ventas:Ventas.ID < VentasProducto.Venta_ID
+
+Ref FK_VentasProducto_Productos:Productos.ID < VentasProducto.Producto_ID
+
+Ref FK_ItemCarrito_Productos:Productos.ID < ItemCarrito.Producto_ID
+
+Ref FK_ItemCarrito_Usuarios:Usuarios.ID < ItemCarrito.Usuario_ID
+
+Ref FK_Imagenes_Productos:Productos.ID < Imagenes.Producto_ID
+
+Ref FK_Favoritos_Productos:Productos.ID < Favoritos.Producto_ID
+
+Ref FK_Favoritos_Usuarios:Usuarios.ID < Favoritos.Usuario_ID
+
+Ref FK_Envios_Ventas:Ventas.ID < Envios.Venta_ID
+
+Ref FK_Envios_EstadoEnvio:Estado_envio.ID < Envios.Estado_envio_ID
