@@ -127,6 +127,7 @@ Esto instalara las dependencias (tiene dependencias npm!!) e iniciará el servid
 ├── .env.example        # Ejemplo de archivo de variables de entorno
 └── README.md           # Este archivo
 ```
+
 ## 🗺️ Roadmap Futuro
 
     Panel de Administración: Una interfaz de administración robusta para la gestión de pedidos, productos, usuarios y descuentos.
