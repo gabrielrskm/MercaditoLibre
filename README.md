@@ -1,4 +1,4 @@
-🚀 EcomArg: Tu Solución de Ecommerce Simple para Argentina
+🚀 EcomDeno: Tu Solución de Ecommerce Simple para Argentina
 
 EcomArg es una plataforma de comercio electrónico de código abierto, construida con Fresh y Deno, diseñada específicamente para la simplicidad y la eficiencia. Orientada a pequeños y medianos comercios en Argentina, ofrece una experiencia de compra fluida con opciones de pago locales como Mercado Pago y transferencias CBU. ¡Configura tu tienda online en minutos y empieza a vender!
 
@@ -33,6 +33,8 @@ EcomArg es una plataforma de comercio electrónico de código abierto, construid
     Preact: Una alternativa ligera a React, utilizada por Fresh para la parte interactiva del UI.
 
     Tailwind CSS: Para un desarrollo de UI rápido y altamente personalizable.
+
+    DaisyUI : libreria para Tailwind para simplificar el diseño 
 
     Base de Datos (a elegir):
 
@@ -88,7 +90,7 @@ Con Supabase
 
     Crea un nuevo proyecto en Supabase.
 
-    Importa el esquema SQL proporcionado en la carpeta database/supabase_schema.sql (o la que hayas definido) a tu base de datos PostgreSQL de Supabase.
+    Importa las query proporcionado en la carpeta database/supabase/ a tu base de datos PostgreSQL de Supabase.
 
     Configura las políticas de Row Level Security (RLS) según tus necesidades de seguridad.
 
@@ -98,16 +100,17 @@ Con Firebase
 
     Habilita Cloud Firestore y configura tus reglas de seguridad para Firestore.
 
-    Implementa la estructura de colecciones y documentos según el modelo NoSQL discutido (ver sección "Modelo de Datos" en la documentación).
+    Implementa la estructura de colecciones y documentos según el modelo NoSQL de la carpeta database/firebase.
 
 4. Instalar Dependencias y Ejecutar
 
-Deno no usa node_modules. Las dependencias se gestionan mediante importaciones directas en tu código.
 Bash
+
+deno install 
 
 deno task start
 
-Esto iniciará el servidor de desarrollo de Fresh. Abre tu navegador y visita http://localhost:8000 (o el puerto que hayas configurado).
+Esto instalara las dependencias (tiene dependencias npm!!) e iniciará el servidor de desarrollo de Fresh. Abre tu navegador y visita http://localhost:8000 (o el puerto que hayas configurado).
 
 🏗️ Estructura del Proyecto
 
@@ -118,6 +121,7 @@ EcomArg/
 ├── static/              # Archivos estáticos (imágenes, CSS, etc.)
 ├── util/                # Utilidades y funciones de ayuda
 ├── database/            # Archivos relacionados con la base de datos (esquemas SQL, etc.)
+├── integrations/        # Archivos relacionados con medios de pago y envio de mails
 ├── deno.json            # Archivo de configuración de Deno
 ├── main.ts              # Punto de entrada de la aplicación Fresh
 ├── .env.example         # Ejemplo de archivo de variables de entorno
@@ -157,4 +161,4 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más 
 
 Si encuentras EcomArg útil, considera darle una ⭐ en GitHub. ¡Tu apoyo es muy valorado!
 
-¡Espero que este README.md te sirva como una excelente base para tu proyecto! Puedes ajustarlo con los detalles específicos de tu implementación y añadir capturas de pantalla o un GIF de la aplicación en acción para hacerlo aún más atractivo. ¡Mucho éxito con EcomArg!
+¡Espero que este README.md te sirva como una excelente base para tu proyecto! Puedes ajustarlo con los detalles específicos de tu implementación y añadir capturas de pantalla o un GIF de la aplicación en acción para hacerlo aún más atractivo. ¡Mucho éxito con EcomDeno!
