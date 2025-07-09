@@ -24,6 +24,7 @@
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.7.3/",
     "@pakornv/fresh-plugin-tailwindcss": "jsr:@pakornv/fresh-plugin-tailwindcss@^1.0.3",
+    "@supabase/supabase-js": "jsr:@supabase/supabase-js@^2.50.3",
     "daisyui": "npm:daisyui@^5.0.43",
     "preact": "https://esm.sh/preact@10.22.0",
     "preact/": "https://esm.sh/preact@10.22.0/",

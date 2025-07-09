@@ -17,7 +17,7 @@ export function Card(imageUrl: string, title: string, description: string, price
             <div className="card-actions justify-between">
            <span className="text-lg font-bold">Precio: ${price}</span>
            {stock ?
-             <span className="badge badge-error">En Stock</span> :
+             <span className="badge badge-success">En Stock</span> :
              <span className="badge badge-error">Agotado</span>}
            </div>
          </div>

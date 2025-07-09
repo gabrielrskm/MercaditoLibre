@@ -1,8 +1,10 @@
+import UserMenu from "../islands/UserMenu.tsx";
+import SidebarCart from "./SidebarCart.tsx";
 import ToggleTheme from "./TogleTheme.tsx";
 
 export default function Menu() {
    return (
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100/50 shadow-sm dropdown fixed z-10 backdrop-blur-lg">
          <div className="navbar-start">
             <div className="dropdown">
                <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -27,20 +29,12 @@ export default function Menu() {
                   className="menu menu-xxl text-2xl dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
                >
                   <li>
-                     <a>Inicio</a>
+                     <a href="/">Inicio</a>
                   </li>
                   <li>
-                     <a>Productos</a>
+                     <a href="/products">Productos</a>
                   </li>
-                  <li>
-                     <a>Carrito</a>
-                  </li>
-                  <li>
-                     <a href="/login">Iniciar sesion</a>
-                  </li>
-                  <li>
-                     <a href="/register">Registrarse</a>
-                  </li>
+                  <UserMenu/>
                </ul>
             </div>
             <a className="btn btn-ghost text-xl lg:hidden">ecommerce</a>
@@ -54,18 +48,11 @@ export default function Menu() {
                <li>
                   <a href="/products">Productos</a>
                </li>
-               <li>
-                  <a href="/cart">Carrito</a>
-               </li>
-               <li>
-                  <a href="/login">Login</a>
-               </li>
-               <li>
-                  <a href="/register">Registrarse</a>
-               </li>
+               <UserMenu/>
             </ul>
          </div>
          <div className="navbar-end">
+            <SidebarCart/>
             <ToggleTheme />
          </div>
       </div>
