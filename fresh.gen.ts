@@ -10,6 +10,7 @@ import * as $detail from "./routes/detail.tsx";
 import * as $greet_name_ from "./routes/greet/[name].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $products from "./routes/products.tsx";
+import * as $CarouselNavigate from "./islands/CarouselNavigate.tsx";
 import * as $Counter from "./islands/Counter.tsx";
 import * as $UserMenu from "./islands/UserMenu.tsx";
 import type { Manifest } from "$fresh/server.ts";
@@ -26,6 +27,7 @@ const manifest = {
     "./routes/products.tsx": $products,
   },
   islands: {
+    "./islands/CarouselNavigate.tsx": $CarouselNavigate,
     "./islands/Counter.tsx": $Counter,
     "./islands/UserMenu.tsx": $UserMenu,
   },

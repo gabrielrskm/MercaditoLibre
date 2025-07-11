@@ -5,7 +5,7 @@ export function Card(imageUrl: string, title: string, description: string, price
       <div className="card bg-base-100 w-96 shadow-sm p-4">
          <figure className="flex justify-center">
             <img
-               className="rounded-lg  w-[200px] h-[200px]"
+               className="rounded-lg w-50 h-50 object-cover"
                style={{ aspectRatio: "1 / 1" }}
                src={imageUrl}
                alt={title}
