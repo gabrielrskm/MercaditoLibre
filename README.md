@@ -1,6 +1,6 @@
-# 🚀 EcomDeno: Tu Solución de Ecommerce Simple para Argentina
+# 🚀 MercaditoLibre : Tu Solución de Ecommerce Simple para Argentina
 
-EcomArg es una plataforma de comercio electrónico de código abierto, construida con Fresh y Deno, diseñada específicamente para la simplicidad y la eficiencia. Orientada a pequeños y medianos comercios en Argentina, ofrece una experiencia de compra fluida con opciones de pago locales como Mercado Pago y transferencias CBU. ¡Configura tu tienda online en minutos y empieza a vender!
+MercaditoLibre es una plataforma de comercio electrónico de código abierto, construida con Fresh y Deno, diseñada específicamente para la simplicidad y la eficiencia. Orientada a pequeños y medianos comercios en Argentina, ofrece una experiencia de compra fluida con opciones de pago locales como Mercado Pago y transferencias CBU. ¡Configura tu tienda online en minutos y empieza a vender!
 
 ## ✨ Características Destacadas
 
@@ -56,8 +56,8 @@ Requisitos
 
 Bash
 
-git clone https://github.com/tu-usuario/EcomArg.git
-cd EcomArg
+git clone https://github.com/gabydev/MercaditoLibre.git
+cd MercaditoLibre
 
 ### 2. Configuración de Variables de Entorno
 
@@ -142,7 +142,7 @@ Esto instalara las dependencias (tiene dependencias npm!!) e iniciará el servid
 
 ## 🤝 Contribuciones
 
-¡Tu ayuda es bienvenida! Si tienes ideas para mejorar EcomArg, encuentra un bug o quieres añadir una nueva característica, por favor:
+¡Tu ayuda es bienvenida! Si tienes ideas para mejorar MercaditoLibre, encuentra un bug o quieres añadir una nueva característica, por favor:
 
     Haz un "fork" de este repositorio.
 
@@ -160,4 +160,4 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más 
 
 ## ❤️ Apoya el Proyecto
 
-Si encuentras EcomArg útil, considera darle una ⭐ en GitHub. ¡Tu apoyo es muy valorado!
+Si encuentras MercaditoLibre útil, considera darle una ⭐ en GitHub. ¡Tu apoyo es muy valorado!

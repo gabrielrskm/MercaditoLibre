@@ -1,3 +1,5 @@
+
+
 export default function Filter() {
    return (
       <div id="filter" className="w-auto p-4 mt-20 max-md:pt-20 bg-base-300">
@@ -32,7 +34,6 @@ export default function Filter() {
                <option disabled selected>
                   Elige una opción
                </option>
-               <option>Más reciente</option>
                <option>Menor precio</option>
                <option>Mayor precio</option>
             </select>

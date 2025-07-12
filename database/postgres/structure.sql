@@ -3,7 +3,8 @@
 CREATE TABLE Categories (
     ID SERIAL PRIMARY KEY,
     Name VARCHAR(100),
-    DeactivatedAt TIMESTAMPTZ
+    DeactivatedAt TIMESTAMPTZ,
+    Description Text
 );
 
 ---
@@ -11,6 +12,7 @@ CREATE TABLE Categories (
 CREATE TABLE Brands (
     ID SERIAL PRIMARY KEY,
     Name VARCHAR(100),
+    Description Text,
     DeactivatedAt TIMESTAMPTZ
 );
 
@@ -22,11 +24,7 @@ CREATE TABLE ShippingStatuses (
     DeactivatedAt TIMESTAMPTZ
 );
 
----
--- Table Users
--- NOTE: If integrating with Supabase Auth, consider using UUID for the ID column
--- and linking it to auth.users.id for consistency and security.
--- For this schema, keeping SERIAL as requested.
+
 CREATE TABLE Users (
     ID SERIAL PRIMARY KEY,
     FirstName VARCHAR(50),
