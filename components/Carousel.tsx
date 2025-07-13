@@ -1,17 +1,7 @@
-
-
-interface Products {
-   id: number;
-   name: string;
-   description: string;
-   price: number;
-   imageUrl: string;
-   stock?: boolean;
-   featured?: boolean;
-}
+import { ProductWithImage } from "../connection/product-query.ts";
 
 interface CarouselProps {
-   products: Products[];
+   products: ProductWithImage[];
 }
 
 export default function Carousel({ products = [] }: CarouselProps) {
@@ -19,10 +9,9 @@ export default function Carousel({ products = [] }: CarouselProps) {
       <div className="carousel w-full">
          {products.map((product, index) => (
             <div id={`slide${index + 1}`} className="carousel-item justify-center relative w-full" key={product.id}>
-               <a href={`/products/${product.id}`}>
-                  {" "}
+               <a href={`/detail/${product.id}`}>
                   <img
-                     src={product.imageUrl}
+                     src={product.image ? product.image : "default-image.jpg"}
                      className="w-100 h-100 rounded-lg object-cover"
                      alt={`Ver detalles de ${product.name || product.id}`}
                      style={{ cursor: "pointer" }}

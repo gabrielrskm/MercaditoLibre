@@ -11,6 +11,15 @@ export default function Footer() {
         </p>
       </aside>
 
+      
+
+      <nav>
+        <header className="footer-title">Acerca de mí</header>
+        <a className="link link-hover" href="https://gabrielrskm.github.io/Portfolio/">Portafolio</a>
+        <a className="link link-hover" href="https://www.linkedin.com/in/gabydev/">LinkedIn</a>
+        <a className="link link-hover" href="mailto:gabrielrskm@gmail.com">Contratame</a>
+      </nav>
+
       <nav>
         <header className="footer-title">Proyecto</header>
         <a className="link link-hover">Repositorio en GitHub</a>
@@ -19,17 +28,8 @@ export default function Footer() {
       </nav>
 
       <nav>
-        <header className="footer-title">Acerca de mí</header>
-        <a className="link link-hover">Portafolio</a>
-        <a className="link link-hover">LinkedIn</a>
-        <a className="link link-hover">Contratame</a>
-      </nav>
-
-      <nav>
         <header className="footer-title">Legal</header>
-        <a className="link link-hover">Licencia MIT</a>
-        <a className="link link-hover">Términos de uso</a>
-        <a className="link link-hover">Política de privacidad</a>
+        <a className="link link-hover" href="https://opensource.org/licenses/MIT">Licencia MIT</a>
       </nav>
     </footer>
   );

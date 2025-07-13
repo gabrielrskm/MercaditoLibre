@@ -11,3 +11,4 @@ export async function getAllCategories(): Promise<Category[]> {
   if (error) throw new Error(error.message);
   return data;
 }
+

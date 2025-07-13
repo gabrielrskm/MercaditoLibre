@@ -6,12 +6,13 @@ import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $api_joke from "./routes/api/joke.ts";
 import * as $checkout from "./routes/checkout.tsx";
-import * as $detail from "./routes/detail.tsx";
-import * as $greet_name_ from "./routes/greet/[name].tsx";
+import * as $detail_id_ from "./routes/detail/[id].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $products from "./routes/products.tsx";
 import * as $CarouselNavigate from "./islands/CarouselNavigate.tsx";
 import * as $Counter from "./islands/Counter.tsx";
+import * as $ThemeScript from "./islands/ThemeScript.tsx";
+import * as $ToggleTheme from "./islands/ToggleTheme.tsx";
 import * as $UserMenu from "./islands/UserMenu.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
@@ -21,14 +22,15 @@ const manifest = {
     "./routes/_app.tsx": $_app,
     "./routes/api/joke.ts": $api_joke,
     "./routes/checkout.tsx": $checkout,
-    "./routes/detail.tsx": $detail,
-    "./routes/greet/[name].tsx": $greet_name_,
+    "./routes/detail/[id].tsx": $detail_id_,
     "./routes/index.tsx": $index,
     "./routes/products.tsx": $products,
   },
   islands: {
     "./islands/CarouselNavigate.tsx": $CarouselNavigate,
     "./islands/Counter.tsx": $Counter,
+    "./islands/ThemeScript.tsx": $ThemeScript,
+    "./islands/ToggleTheme.tsx": $ToggleTheme,
     "./islands/UserMenu.tsx": $UserMenu,
   },
   baseUrl: import.meta.url,

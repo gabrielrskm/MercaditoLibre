@@ -93,6 +93,13 @@ export type Database = {
             foreignKeyName: "fk_cartitems_products"
             columns: ["product_id"]
             isOneToOne: false
+            referencedRelation: "product_with_image"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "fk_cartitems_products"
+            columns: ["product_id"]
+            isOneToOne: false
             referencedRelation: "products"
             referencedColumns: ["id"]
           },
@@ -144,6 +151,13 @@ export type Database = {
             foreignKeyName: "fk_favorites_products"
             columns: ["product_id"]
             isOneToOne: false
+            referencedRelation: "product_with_image"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "fk_favorites_products"
+            columns: ["product_id"]
+            isOneToOne: false
             referencedRelation: "products"
             referencedColumns: ["id"]
           },
@@ -176,6 +190,13 @@ export type Database = {
           uri?: string | null
         }
         Relationships: [
+          {
+            foreignKeyName: "fk_images_products"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "product_with_image"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "fk_images_products"
             columns: ["product_id"]
@@ -283,6 +304,13 @@ export type Database = {
           unitprice?: number | null
         }
         Relationships: [
+          {
+            foreignKeyName: "fk_saleitems_products"
+            columns: ["product_id"]
+            isOneToOne: false
+            referencedRelation: "product_with_image"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "fk_saleitems_products"
             columns: ["product_id"]
@@ -429,7 +457,36 @@ export type Database = {
       }
     }
     Views: {
-      [_ in never]: never
+      product_with_image: {
+        Row: {
+          availablestock: number | null
+          description: string | null
+          id: number | null
+          image: string | null
+          isfeatured: boolean | null
+          name: string | null
+          price: number | null
+        }
+        Insert: {
+          availablestock?: number | null
+          description?: string | null
+          id?: number | null
+          image?: never
+          isfeatured?: boolean | null
+          name?: string | null
+          price?: number | null
+        }
+        Update: {
+          availablestock?: number | null
+          description?: string | null
+          id?: number | null
+          image?: never
+          isfeatured?: boolean | null
+          name?: string | null
+          price?: number | null
+        }
+        Relationships: []
+      }
     }
     Functions: {
       [_ in never]: never

@@ -1,3 +1,7 @@
+html:not([data-theme]) body {
+  visibility: hidden;
+}
+
 @import "tailwindcss";
 @plugin "daisyui";
 

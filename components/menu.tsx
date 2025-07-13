@@ -1,6 +1,6 @@
 import UserMenu from "../islands/UserMenu.tsx";
 import SidebarCart from "./SidebarCart.tsx";
-import ToggleTheme from "./TogleTheme.tsx";
+import ToggleTheme from "../islands/ToggleTheme.tsx";
 
 export default function Menu() {
    return (
@@ -37,8 +37,8 @@ export default function Menu() {
                   <UserMenu/>
                </ul>
             </div>
-            <a className="btn btn-ghost text-xl lg:hidden">ecommerce</a>
-            <a className="btn btn-ghost text-xl hidden lg:flex">ecommerce-deno-supabase</a>
+            <span className="text-xl lg:hidden">ecommerce</span>
+            <span className="text-xl hidden lg:flex">ecommerce-deno-supabase</span>
          </div>
          <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal text-lg">
