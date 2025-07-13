@@ -1,5 +1,5 @@
 import { Head } from "$fresh/src/runtime/head.ts";
-import Menu from "../components/menu.tsx";
+import Menu from "../components/Menu.tsx";
 
 export default function Checkout() {
    return (

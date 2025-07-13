@@ -37,8 +37,8 @@ export default function Menu() {
                   <UserMenu/>
                </ul>
             </div>
-            <span className="text-xl lg:hidden">ecommerce</span>
-            <span className="text-xl hidden lg:flex">ecommerce-deno-supabase</span>
+            <span className="text-xl lg:hidden">MercaditoLibre</span>
+            <span className="text-xl hidden lg:flex">MercaditoLibre con Deno y Supabase</span>
          </div>
          <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal text-lg">

@@ -181,14 +181,14 @@ Abrí tu navegador en http://localhost:8000 o el puerto que hayas configurado.
 
 ¡Tu ayuda es bienvenida! Si querés colaborar:
 
-### 1. Hacé un fork
-### 2. Creá una rama
+#### 1. Hacé un fork
+#### 2. Creá una rama
 git checkout -b feature/tu-nueva-funcionalidad
 
-### 3. Hacé cambios y commiteá
+#### 3. Hacé cambios y commiteá
 git commit -am 'feat: añadida funcionalidad X'
 
-### 4. Subí y abrí un pull request
+#### 4. Subí y abrí un pull request
 git push origin feature/tu-nueva-funcionalidad
 
 ## 📄 Licencia

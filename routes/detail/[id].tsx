@@ -1,5 +1,5 @@
 import { Handlers, PageProps } from "$fresh/server.ts";
-import Menu from "../../components/menu.tsx";
+import Menu from "../../components/Menu.tsx";
 import Footer from "../../components/Footer.tsx";
 import { getProductById } from "../../connection/product-query.ts";
 import type { Product } from "../../connection/product-query.ts";

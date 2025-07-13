@@ -2,7 +2,7 @@ import { Head } from "$fresh/runtime.ts";
 import { Card } from "../components/Card.tsx";
 import Filter from "../components/Filter.tsx";
 import Footer from "../components/Footer.tsx";
-import Menu from "../components/menu.tsx";
+import Menu from "../components/Menu.tsx";
 import { getAllProducts } from "../connection/product-query.ts";
 
 export default async function Products() {
