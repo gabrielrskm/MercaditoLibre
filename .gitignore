@@ -5,6 +5,7 @@
 .env.production.local
 .env.local
 
+
 # Fresh build directory
 _fresh/
 # npm dependencies
@@ -18,3 +19,15 @@ node_modules/
 # Credentials file
 .credentials.json
 page-example/
+
+# Ignore the build output directory
+build/
+# Ignore the public directory
+public/
+# Ignore the coverage directory
+coverage/
+# Igore vscode settings
+.vscode/
+
+# Ignore .gitignore file itself
+.gitignore
