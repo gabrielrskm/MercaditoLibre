@@ -106,26 +106,26 @@ cd MercaditoLibre
 
 Crea un archivo .env en la raíz del proyecto:
 
-# Supabase
+#### Supabase
 SUPABASE_URL="https://your-project.supabase.co"
 SUPABASE_ANON_KEY="your-anon-key"
 SUPABASE_SERVICE_ROLE_KEY="your-service-role-key"
 
-# Firebase
+#### Firebase
 FIREBASE_PROJECT_ID="your-project-id"
 FIREBASE_PRIVATE_KEY="your-private-key"
 FIREBASE_CLIENT_EMAIL="your-client-email"
 
-# Mercado Pago
+#### Mercado Pago
 MERCADOPAGO_ACCESS_TOKEN="YOUR_MERCADOPAGO_ACCESS_TOKEN"
 MERCADOPAGO_PUBLIC_KEY="YOUR_MERCADOPAGO_PUBLIC_KEY"
 
-# Puerto
+#### Puerto
 PORT=8000
 
     ⚠️ No subas tu .env a GitHub. Añadilo a tu .gitignore.
 
-3. Configurar tu Base de Datos
+### 3. Configurar tu Base de Datos
 
 Con Supabase:
 
@@ -143,7 +143,7 @@ Con Firebase:
 
     Seguir la estructura de /database/firebase/.
 
-4. Ejecutar el Proyecto
+### 4. Ejecutar el Proyecto
 
 deno install
 deno task start
@@ -165,7 +165,7 @@ Abrí tu navegador en http://localhost:8000 o el puerto que hayas configurado.
 └── README.md
 ```
 
-🗺️ Roadmap Futuro
+## 🗺️ Roadmap Futuro
 
     Panel de Administración: Gestión de pedidos, productos y usuarios.
 
@@ -177,28 +177,29 @@ Abrí tu navegador en http://localhost:8000 o el puerto que hayas configurado.
 
     Internacionalización (i18n): Múltiples idiomas.
 
-🤝 Contribuciones
+## 🤝 Contribuciones
 
 ¡Tu ayuda es bienvenida! Si querés colaborar:
 
-# 1. Hacé un fork
-# 2. Creá una rama
+### 1. Hacé un fork
+### 2. Creá una rama
 git checkout -b feature/tu-nueva-funcionalidad
 
-# 3. Hacé cambios y commiteá
+### 3. Hacé cambios y commiteá
 git commit -am 'feat: añadida funcionalidad X'
 
-# 4. Subí y abrí un pull request
+### 4. Subí y abrí un pull request
 git push origin feature/tu-nueva-funcionalidad
 
-📄 Licencia
+## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT. Consultá el archivo LICENSE para más detalles.
-❤️ Apoyá el Proyecto
+
+## ❤️ Apoyá el Proyecto
 
 Si MercaditoLibre te resulta útil, considerá dejar una ⭐ en GitHub. ¡Tu apoyo ayuda muchísimo!
-🌱 Nuestra Visión
+## 🌱 Nuestra Visión
 
 MercaditoLibre no es solo una plataforma, es una herramienta para fomentar la economía local, la soberanía tecnológica y el acceso a herramientas digitales justas.
 
-Sumate, contribuí o compartilo con quien lo necesite. 💚
+### Sumate, contribuí o compartilo con quien lo necesite. 💚
