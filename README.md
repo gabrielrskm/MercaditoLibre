@@ -1,163 +1,204 @@
 # 🚀 MercaditoLibre : Tu Solución de Ecommerce Simple para Argentina
 
-MercaditoLibre es una plataforma de comercio electrónico de código abierto, construida con Fresh y Deno, diseñada específicamente para la simplicidad y la eficiencia. Orientada a pequeños y medianos comercios en Argentina, ofrece una experiencia de compra fluida con opciones de pago locales como Mercado Pago y transferencias CBU. ¡Configura tu tienda online en minutos y empieza a vender!
+MercaditoLibre es una plataforma de comercio electrónico de código abierto, construida con Fresh y Deno, diseñada específicamente para la simplicidad y la eficiencia. Orientada a pequeños y medianos comercios en Argentina, ofrece una experiencia de compra fluida con opciones de pago locales como Mercado Pago y transferencias CBU. ¡Configura tu tienda online en minutos y empezá a vender!
+
+---
 
 ## ✨ Características Destacadas
 
-    Rendimiento Ultrarrápido: Construido con Fresh y Deno para una carga de página casi instantánea y una experiencia de usuario superior.
+- **Rendimiento Ultrarrápido**: Construido con Fresh y Deno para una carga de página casi instantánea y una experiencia de usuario superior.  
+- **Diseño Responsivo**: Tu tienda lucirá genial en cualquier dispositivo, desde computadoras de escritorio hasta smartphones.  
+- **Integración Flexible de Base de Datos**: Soporte para Supabase y Firebase, permitiéndote elegir la solución de backend que mejor se adapte a tus necesidades.  
+- **Pagos Locales para Argentina**:  
+  - Mercado Pago: Integración simplificada para pagos con tarjeta, RapiPago, Pago Fácil, etc.  
+  - Transferencia CBU: Permite a tus clientes realizar transferencias bancarias directamente.  
+- **Gestión de Productos y Categorías**: Interfaz intuitiva para añadir, editar y organizar tu catálogo.  
+- **Carro de Compras Persistente**: Los clientes pueden añadir productos al carrito y volver más tarde para completar su compra.  
+- **Lista de Favoritos**: Permite a los usuarios guardar productos para futuras compras.  
+- **Desplegable y Escalable**: Diseñado para crecer con tu negocio, desde una pequeña boutique hasta un catálogo más extenso.
 
-    Diseño Responsivo: Tu tienda lucirá genial en cualquier dispositivo, desde computadoras de escritorio hasta smartphones.
-
-    Integración Flexible de Base de Datos: Soporte para Supabase y Firebase, permitiéndote elegir la solución de backend que mejor se adapte a tus necesidades.
-
-    Pagos Locales para Argentina:
-
-        Mercado Pago: Integración simplificada para pagos con tarjeta, RapiPago, Pago Fácil, etc.
-
-        Transferencia CBU: Permite a tus clientes realizar transferencias bancarias directamente.
-
-    Gestión de Productos y Categorías: Interfaz intuitiva para añadir, editar y organizar tu catálogo.
-
-    Carro de Compras Persistente: Los clientes pueden añadir productos al carrito y volver más tarde para completar su compra.
-
-    Lista de Favoritos: Permite a los usuarios guardar productos para futuras compras.
-
-    Desplegable y Escalable: Diseñado para crecer con tu negocio, desde una pequeña boutique hasta un catálogo más extenso.
+---
 
 ## 🛠️ Tecnologías Utilizadas
 
-    Fresh: El framework web de próxima generación para Deno, que ofrece renderización del lado del servidor (SSR) y arquitectura de islas.
+- **Fresh**: Framework web moderno para Deno con renderizado del lado del servidor (SSR) y arquitectura de islas.  
+- **Deno**: Runtime seguro para JavaScript y TypeScript.  
+- **Preact**: Alternativa ligera a React, utilizada por Fresh para la parte interactiva del UI.  
+- **Tailwind CSS**: Para un desarrollo de UI rápido y personalizable.  
+- **DaisyUI**: Librería para Tailwind que simplifica el diseño.  
+- **Base de Datos (a elección)**:  
+  - Supabase: PostgreSQL con funcionalidades como RLS, Auth y Storage.  
+  - Firebase: Firestore (NoSQL) para escalabilidad simple.
 
-    Deno: Un runtime seguro para JavaScript y TypeScript, que proporciona una experiencia de desarrollo moderna y simplificada.
+---
 
-    Preact: Una alternativa ligera a React, utilizada por Fresh para la parte interactiva del UI.
+## 🔄 Despliegue Gratuito y Escalable
 
-    Tailwind CSS: Para un desarrollo de UI rápido y altamente personalizable.
+MercaditoLibre está pensado para que cualquier comercio pueda comenzar sin inversión inicial y escalar según su crecimiento.
 
-    DaisyUI : libreria para Tailwind para simplificar el diseño 
+### ✅ Modo Gratuito (ideal para pequeños emprendimientos)
 
-    Base de Datos (a elegir):
+Podés desplegar tu tienda de forma totalmente gratuita utilizando:
 
-        Supabase: Backend-as-a-Service de código abierto con una potente base de datos PostgreSQL.
+- **Deno Deploy (Free Tier)** para el servidor web.  
+- **Supabase (Free Tier)** como base de datos y backend.  
+- **Resend (Free Tier)** para envío de correos electrónicos.  
+- **Mercado Pago** para pagos locales sin costo adicional.
 
-        Firebase: Plataforma de desarrollo de Google con Cloud Firestore (NoSQL) para una fácil escalabilidad.
+Con esta configuración, podés tener una tienda funcional y moderna **sin pagar hosting ni base de datos**.
 
-## 🚀 Cómo Empezar (Para Desarrolladores)
+---
 
-Requisitos
+### 🚀 Migración a Railway (para comercios que escalan)
 
-    Deno instalado (versión 1.x o superior recomendada).
+Si tu tienda crece y empieza a superar los límites de los servicios gratuitos (más productos, tráfico o funciones avanzadas), podés migrar a un entorno más robusto con **Railway**, una plataforma moderna que ofrece:
 
-    Una cuenta en Supabase o Firebase para tu backend.
+- Hosting de tu backend (Deno o Docker).  
+- Base de datos PostgreSQL incluida.  
+- URL personalizada.  
+- Entorno predecible a un costo fijo de **$5 USD/mes** por comercio.
 
-    Credenciales de Mercado Pago (Access Token, Public Key) para el procesamiento de pagos.
+🔧 La migración puede ser realizada por vos o delegada al equipo mantenedor de MercaditoLibre como un servicio adicional.
+
+---
+
+## 🧰 Mantenimiento Opcional
+
+Si no querés encargarte del mantenimiento técnico, podés delegarlo. Ofrecemos soporte opcional que puede incluir:
+
+- Monitoreo y actualizaciones.  
+- Migraciones de datos.  
+- Soporte ante errores o caídas.  
+- Asistencia con integraciones como Mercado Pago.
+
+Este mantenimiento es **opcional y acordado con cada comerciante**. También podés autogestionar tu tienda gracias a la filosofía open source del proyecto.
+
+---
+
+## 🌐 Hosting por tu Cuenta o con Ayuda
+
+MercaditoLibre es open source. Podés:
+
+- Montar tu propia tienda sin depender de terceros.  
+- Implementarlo para otros (clientes, cooperativas, sindicatos).  
+- Solicitar ayuda para configurarlo.  
+- Contribuir al proyecto con mejoras o feedback.
+
+---
+
+## 🧑‍💻 Para Desarrolladores
+
+### 🚀 Cómo Empezar
+
+**Requisitos:**
+- Tener Deno instalado (v1.x o superior).  
+- Una cuenta en Supabase o Firebase.  
+- Credenciales de Mercado Pago (Access Token y Public Key).
 
 ### 1. Clonar el Repositorio
 
-Bash
-
+```bash
 git clone https://github.com/gabydev/MercaditoLibre.git
 cd MercaditoLibre
+```
 
-### 2. Configuración de Variables de Entorno
+2. Configurar Variables de Entorno
 
-Crea un archivo .env en la raíz del proyecto y añade tus credenciales.
-Fragmento de código
+Crea un archivo .env en la raíz del proyecto:
 
-#### Ejemplo para Supabase
+# Supabase
 SUPABASE_URL="https://your-project.supabase.co"
 SUPABASE_ANON_KEY="your-anon-key"
-SUPABASE_SERVICE_ROLE_KEY="your-service-role-key" # Para operaciones de backend seguras
+SUPABASE_SERVICE_ROLE_KEY="your-service-role-key"
 
-#### Ejemplo para Firebase (asegúrate de configurar las variables de entorno para el Admin SDK)
+# Firebase
 FIREBASE_PROJECT_ID="your-project-id"
-#### Otras variables para el Admin SDK, como una clave privada o ruta a un archivo JSON de credenciales
 FIREBASE_PRIVATE_KEY="your-private-key"
 FIREBASE_CLIENT_EMAIL="your-client-email"
 
-#### Credenciales de Mercado Pago (reemplaza con las tuyas)
+# Mercado Pago
 MERCADOPAGO_ACCESS_TOKEN="YOUR_MERCADOPAGO_ACCESS_TOKEN"
 MERCADOPAGO_PUBLIC_KEY="YOUR_MERCADOPAGO_PUBLIC_KEY"
 
-#### Opcional: Puerto para la aplicación Deno
+# Puerto
 PORT=8000
 
-Importante: Nunca subas tu archivo .env a control de versiones. Asegúrate de añadirlo a tu .gitignore.
+    ⚠️ No subas tu .env a GitHub. Añadilo a tu .gitignore.
 
-### 3. Configurar tu Base de Datos
+3. Configurar tu Base de Datos
 
-Con Supabase
+Con Supabase:
 
-    Crea un nuevo proyecto en Supabase.
+    Crear un proyecto nuevo.
 
-    Importa las query proporcionado en la carpeta database/supabase/ a tu base de datos PostgreSQL de Supabase.
+    Importar las queries SQL desde /database/supabase/.
 
-    Configura las políticas de Row Level Security (RLS) según tus necesidades de seguridad.
+    Configurar políticas RLS.
 
-Con Firebase
+Con Firebase:
 
-    Crea un nuevo proyecto en Firebase.
+    Crear un proyecto nuevo.
 
-    Habilita Cloud Firestore y configura tus reglas de seguridad para Firestore.
+    Habilitar Firestore y sus reglas.
 
-    Implementa la estructura de colecciones y documentos según el modelo NoSQL de la carpeta database/firebase.
+    Seguir la estructura de /database/firebase/.
 
-### 4. Instalar Dependencias y Ejecutar
+4. Ejecutar el Proyecto
 
-Bash
-
-deno install 
-
+deno install
 deno task start
 
-Esto instalara las dependencias (tiene dependencias npm!!) e iniciará el servidor de desarrollo de Fresh. Abre tu navegador y visita http://localhost:8000 (o el puerto que hayas configurado).
-
-## 🏗️ Estructura del Proyecto
+Abrí tu navegador en http://localhost:8000 o el puerto que hayas configurado.
+🏗️ Estructura del Proyecto
 
 ```bash
-├── components/          # Componentes reutilizables (no islas por defecto)
-├── islands/             # Componentes interactivos que se hidratan en el cliente
-├── routes/              # Rutas de tu aplicación (páginas y API handlers)
-├── static/              # Archivos estáticos (imágenes, CSS, etc.)
-├── util/                # Utilidades y funciones de ayuda
-├── database/            # Archivos relacionados con la base de datos (esquemas SQL, etc.)
-├── integrations/        # Archivos relacionados con medios de pago y envio de mails
-├── deno.json            # Archivo de configuración de Deno
-├── main.ts             # Punto de entrada de la aplicación Fresh
-├── .env.example        # Ejemplo de archivo de variables de entorno
-└── README.md           # Este archivo
+├── components/          # Componentes reutilizables
+├── islands/             # Componentes interactivos (Preact)
+├── routes/              # Rutas de la app (SSR + API)
+├── static/              # Archivos estáticos
+├── util/                # Funciones de utilidad
+├── database/            # SQL/estructura para Supabase o Firebase
+├── integrations/        # Pagos, emails, etc.
+├── deno.json            # Configuración del proyecto
+├── main.ts              # Entrada principal
+├── .env-example         # Plantilla de configuración
+└── README.md
 ```
 
-## 🗺️ Roadmap Futuro
+🗺️ Roadmap Futuro
 
-    Panel de Administración: Una interfaz de administración robusta para la gestión de pedidos, productos, usuarios y descuentos.
+    Panel de Administración: Gestión de pedidos, productos y usuarios.
 
-    Pasarelas de Pago Adicionales: Explorar otras opciones de pago regionales o internacionales.
+    Nuevas Pasarelas de Pago: Soporte para pagos regionales e internacionales.
 
-    Optimización de SEO: Mejorar la visibilidad en motores de búsqueda.
+    Optimización de SEO: Mejora de visibilidad en buscadores.
 
-    Notificaciones: Integración con servicios de notificación por correo electrónico o WhatsApp para actualizaciones de pedidos.
+    Notificaciones: Correos automáticos y WhatsApp.
 
-    Internacionalización (i18n): Soporte para múltiples idiomas.
+    Internacionalización (i18n): Múltiples idiomas.
 
-## 🤝 Contribuciones
+🤝 Contribuciones
 
-¡Tu ayuda es bienvenida! Si tienes ideas para mejorar MercaditoLibre, encuentra un bug o quieres añadir una nueva característica, por favor:
+¡Tu ayuda es bienvenida! Si querés colaborar:
 
-    Haz un "fork" de este repositorio.
+# 1. Hacé un fork
+# 2. Creá una rama
+git checkout -b feature/tu-nueva-funcionalidad
 
-    Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
+# 3. Hacé cambios y commiteá
+git commit -am 'feat: añadida funcionalidad X'
 
-    Realiza tus cambios y haz "commit" (git commit -am 'feat: Añade nueva funcionalidad X').
+# 4. Subí y abrí un pull request
+git push origin feature/tu-nueva-funcionalidad
 
-    Sube tus cambios (git push origin feature/nueva-funcionalidad).
+📄 Licencia
 
-    Abre un "Pull Request".
+Este proyecto está bajo la Licencia MIT. Consultá el archivo LICENSE para más detalles.
+❤️ Apoyá el Proyecto
 
-## 📄 Licencia
+Si MercaditoLibre te resulta útil, considerá dejar una ⭐ en GitHub. ¡Tu apoyo ayuda muchísimo!
+🌱 Nuestra Visión
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
+MercaditoLibre no es solo una plataforma, es una herramienta para fomentar la economía local, la soberanía tecnológica y el acceso a herramientas digitales justas.
 
-## ❤️ Apoya el Proyecto
-
-Si encuentras MercaditoLibre útil, considera darle una ⭐ en GitHub. ¡Tu apoyo es muy valorado!
+Sumate, contribuí o compartilo con quien lo necesite. 💚

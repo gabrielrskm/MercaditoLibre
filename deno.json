@@ -31,6 +31,7 @@
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
     "$std/": "https://deno.land/std@0.216.0/",
+    "resend": "npm:resend@^4.6.0",
     "tailwindcss": "npm:tailwindcss@^4.1.11",
     "lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@2f3d7c6b9aa9a1856d7f62cc3ee62ad8a4495a39/",
     "lume/cms/": "https://cdn.jsdelivr.net/gh/lumeland/cms@6a17aac8bb5b95ba9c22f0bc36645c17e56c9b5d/",
