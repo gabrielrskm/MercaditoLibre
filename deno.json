@@ -26,6 +26,7 @@
     "@pakornv/fresh-plugin-tailwindcss": "jsr:@pakornv/fresh-plugin-tailwindcss@^1.0.3",
     "@supabase/supabase-js": "jsr:@supabase/supabase-js@^2.50.5",
     "daisyui": "npm:daisyui@^5.0.43",
+    "mercadopago": "npm:mercadopago@^2.8.0",
     "preact": "https://esm.sh/preact@10.22.0",
     "preact/": "https://esm.sh/preact@10.22.0/",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",

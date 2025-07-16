@@ -29,6 +29,7 @@ export default function Carousel({ images }: CarouselProps) {
 
    return (
       <div class="relative w-full max-w-4xl mx-auto overflow-hidden group rounded-md shadow-md">
+         
          <div
             class="flex transition-transform duration-700 ease-in-out"
             style={{

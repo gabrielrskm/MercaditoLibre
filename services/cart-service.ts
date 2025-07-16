@@ -12,18 +12,17 @@ export const cart = signal<CartItem[]>(loadCartFromStorage());
 export const countItemCart = signal<number>(0);
 calculateCountItems();
 
-function calculateCountItems()
-{
+function calculateCountItems() {
    if (cart.value.length === 0) {
       countItemCart.value = 0;
       return;
    }
    let count = 0;
-   cart.value.forEach(x => {
+   cart.value.forEach((x) => {
       count += x.quantity;
-   })
+   });
    countItemCart.value = count;
-};
+}
 
 function loadCartFromStorage(): CartItem[] {
    try {
@@ -61,8 +60,19 @@ export function clearCart() {
    calculateCountItems();
 }
 
-export function getItemsCart() : CartItem[] {
+export function getItemsCart(): CartItem[] {
    const data = loadCartFromStorage();
    return data;
 }
 
+export function joinCartWithDb(dbItems: CartItem[]) {
+   const localItems = getItemsCart();
+   localItems.forEach((item) => {
+      const dbItem = dbItems.find((dbItem) => dbItem.id === item.id);
+      if (dbItem) {
+         dbItem.quantity += item.quantity;
+      } else {
+         dbItems.push(item);
+      }
+   });
+}
