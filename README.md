@@ -156,7 +156,7 @@ Abrí tu navegador en http://localhost:8000 o el puerto que hayas configurado.
 ├── islands/             # Componentes interactivos (Preact)
 ├── routes/              # Rutas de la app (SSR + API)
 ├── static/              # Archivos estáticos
-├── util/                # Funciones de utilidad
+├── service/             # Funciones de utilidad
 ├── database/            # SQL/estructura para Supabase o Firebase
 ├── integrations/        # Pagos, emails, etc.
 ├── deno.json            # Configuración del proyecto

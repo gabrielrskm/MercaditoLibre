@@ -1,9 +1,12 @@
 import { ProductWithImage } from "../connection/product-query.ts";
-import { Button } from "./Button.tsx";
+import { Button } from "../islands/Button.tsx";
 
 export function Card(props: ProductWithImage) {
    let { id, image, name, description, price, availablestock } = props;
 
+   if (!id) {
+      id = 0;
+   }
    if (!image) {
       image = "https://via.placeholder.com/150"; // Default image if none provided
    }
@@ -12,6 +15,9 @@ export function Card(props: ProductWithImage) {
    }
    if (!description) {
       description = "Descripción no disponible"; // Default description if none provided
+   }
+   if (!price) {
+      price = 0;
    }
 
    return (
@@ -39,8 +45,12 @@ export function Card(props: ProductWithImage) {
             </div>
          </div>
          <div className="card-actions justify-center gap-5">
-            {Button({ children: "Comprar" })}
-            {Button({ children: "Agregar al Carrito" })}
+            <Button action="buy" product={{id,image,name,price}}>
+               Comprar
+            </Button>
+            <Button action="cart" product={{ id, image, name, price }}>
+               Agregar al Carrito
+            </Button>
          </div>
       </div>
    );

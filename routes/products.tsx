@@ -15,7 +15,10 @@ export default async function Products() {
       <>
          <Head>
             <title>Productos | MercaditoLibre</title>
-            <meta name="description" content="Explorá todos los productos disponibles en nuestra tienda online hecha con Fresh y Supabase." />
+            <meta
+               name="description"
+               content="Explorá todos los productos disponibles en nuestra tienda online hecha con Fresh y Supabase."
+            />
          </Head>
          <div className="container h-full bg-base-200 mx-auto">
             <Menu />
@@ -23,7 +26,7 @@ export default async function Products() {
                <Filter />
                <div id="productList" className="w-auto flex flex-wrap justify-center gap-4 p-4 pt-30 max-md:pt-1">
                   {list.map((item) => (
-                     <Card {...item} />
+                     <Card key={item.id} {...item} />
                   ))}
                </div>
             </div>

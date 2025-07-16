@@ -9,8 +9,11 @@ import * as $checkout from "./routes/checkout.tsx";
 import * as $detail_id_ from "./routes/detail/[id].tsx";
 import * as $index from "./routes/index.tsx";
 import * as $products from "./routes/products.tsx";
+import * as $Button from "./islands/Button.tsx";
+import * as $Carousel from "./islands/Carousel.tsx";
 import * as $CarouselNavigate from "./islands/CarouselNavigate.tsx";
-import * as $Counter from "./islands/Counter.tsx";
+import * as $CartButtonNumber from "./islands/CartButtonNumber.tsx";
+import * as $CartSideBarItem from "./islands/CartSideBarItem.tsx";
 import * as $ThemeScript from "./islands/ThemeScript.tsx";
 import * as $ToggleTheme from "./islands/ToggleTheme.tsx";
 import * as $UserMenu from "./islands/UserMenu.tsx";
@@ -27,8 +30,11 @@ const manifest = {
     "./routes/products.tsx": $products,
   },
   islands: {
+    "./islands/Button.tsx": $Button,
+    "./islands/Carousel.tsx": $Carousel,
     "./islands/CarouselNavigate.tsx": $CarouselNavigate,
-    "./islands/Counter.tsx": $Counter,
+    "./islands/CartButtonNumber.tsx": $CartButtonNumber,
+    "./islands/CartSideBarItem.tsx": $CartSideBarItem,
     "./islands/ThemeScript.tsx": $ThemeScript,
     "./islands/ToggleTheme.tsx": $ToggleTheme,
     "./islands/UserMenu.tsx": $UserMenu,
