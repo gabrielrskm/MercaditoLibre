@@ -11,7 +11,6 @@ import * as $index from "./routes/index.tsx";
 import * as $products from "./routes/products.tsx";
 import * as $Button from "./islands/Button.tsx";
 import * as $Carousel from "./islands/Carousel.tsx";
-import * as $CarouselNavigate from "./islands/CarouselNavigate.tsx";
 import * as $CartButtonNumber from "./islands/CartButtonNumber.tsx";
 import * as $CartSideBarItem from "./islands/CartSideBarItem.tsx";
 import * as $ThemeScript from "./islands/ThemeScript.tsx";
@@ -32,7 +31,6 @@ const manifest = {
   islands: {
     "./islands/Button.tsx": $Button,
     "./islands/Carousel.tsx": $Carousel,
-    "./islands/CarouselNavigate.tsx": $CarouselNavigate,
     "./islands/CartButtonNumber.tsx": $CartButtonNumber,
     "./islands/CartSideBarItem.tsx": $CartSideBarItem,
     "./islands/ThemeScript.tsx": $ThemeScript,

@@ -1,4 +1,5 @@
 import { cart } from "../services/cart-service.ts";
+import { formatPrice } from "../utils/formatPrice.ts";
 
 export default function CartSideBarItem() {
    return (
@@ -13,7 +14,8 @@ export default function CartSideBarItem() {
 
                      <div className="flex-1 min-w-0">
                         <h2 className="text-sm font-semibold truncate">{value.name}</h2>
-                        <p className="text-xs text-gray-500 mt-1">Precio: ${value.price}</p>
+                        <p className="text-xs text-gray-500 mt-1">Precio: {formatPrice(value.price)}</p>
+                        <p className="text-xs text-gray-500 mt-1">Cantidad: {value.quantity}</p>
                      </div>
                   </div>
                </li>

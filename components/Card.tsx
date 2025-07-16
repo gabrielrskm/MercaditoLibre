@@ -1,5 +1,6 @@
 import { ProductWithImage } from "../connection/product-query.ts";
 import { Button } from "../islands/Button.tsx";
+import { formatPrice } from "../utils/formatPrice.ts";
 
 export function Card(props: ProductWithImage) {
    let { id, image, name, description, price, availablestock } = props;
@@ -36,7 +37,7 @@ export function Card(props: ProductWithImage) {
             <h2 className="card-title">{name}</h2>
             <p>{description}</p>
             <div className="card-actions justify-between">
-               <span className="text-lg font-bold">Precio: ${price}</span>
+               <span className="text-lg font-bold">Precio: {formatPrice(price)}</span>
                {availablestock ? (
                   <span className="badge badge-success">En Stock</span>
                ) : (
@@ -45,7 +46,7 @@ export function Card(props: ProductWithImage) {
             </div>
          </div>
          <div className="card-actions justify-center gap-5">
-            <Button action="buy" product={{id,image,name,price}}>
+            <Button action="buy" product={{ id, image, name, price }}>
                Comprar
             </Button>
             <Button action="cart" product={{ id, image, name, price }}>
