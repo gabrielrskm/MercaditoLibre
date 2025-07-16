@@ -1,10 +1,11 @@
 import { cart } from "../services/cart-service.ts";
 import { formatPrice } from "../utils/formatPrice.ts";
+import { Button } from './Button.tsx';
 
 export default function CartSideBarItem() {
    return (
       <div className="h-full flex flex-col overflow-hidden">
-         <ul className="menu bg-base-200 text-base-content p-4 flex-1 overflow-y-auto">
+         <ul className="menu bg-base-200 text-base-content p-4 flex-1 overflow-y-auto flex-nowrap ">
             {cart.value.map((value) => (
                <li key={value.id} className="mb-4 last:mb-0">
                   <div className="flex items-center gap-4 p-4 bg-base-100 shadow-md rounded-lg w-full max-w-xs">
@@ -16,6 +17,10 @@ export default function CartSideBarItem() {
                         <h2 className="text-sm font-semibold truncate">{value.name}</h2>
                         <p className="text-xs text-gray-500 mt-1">Precio: {formatPrice(value.price)}</p>
                         <p className="text-xs text-gray-500 mt-1">Cantidad: {value.quantity}</p>
+                     </div>
+                     <div className="flex min-w-0">
+                        <Button action="delete-item" className="btn btn-error w-full" product={value}>X</Button>
+
                      </div>
                   </div>
                </li>

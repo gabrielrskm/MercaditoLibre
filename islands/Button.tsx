@@ -1,5 +1,5 @@
 import { JSX } from "preact";
-import { addToCart } from "../services/cart-service.ts";
+import { addToCart,removeFromCart } from "../services/cart-service.ts";
 
 interface Product{
   id: number;
@@ -10,7 +10,7 @@ interface Product{
 }
 
 interface ButtonProps extends JSX.HTMLAttributes<HTMLButtonElement> {
-  action?: "buy" | "cart" | "back" | "goto";
+  action?: "buy" | "cart" | "back" | "goto" | "delete-item";
   product: Product;
   targetUrl?: string;
 }
@@ -20,6 +20,13 @@ function cart(product: Product) {
     console.error("Product ID is required to add to cart");
   }
   addToCart({ id : product.id ,name:product.name, price:product.price, image:product.image});
+}
+
+function deleteItem(product: Product) {
+  if (product.id === 0) {
+    console.error("Product ID is required to add to cart");
+  }
+  removeFromCart(product.id);
 }
 
 export function Button({ action, product, targetUrl, children, ...rest }: ButtonProps) {
@@ -36,6 +43,9 @@ export function Button({ action, product, targetUrl, children, ...rest }: Button
         break;
       case "goto":
         if (targetUrl) globalThis.location.href = targetUrl;
+        break;
+      case "delete-item":
+        deleteItem(product);
         break;
       default:
         return; // No action by default, just render the button
