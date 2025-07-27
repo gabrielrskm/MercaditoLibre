@@ -8,6 +8,7 @@ export async function getAllCategories(): Promise<Category[]> {
       .from("categories")
       .select("*");
 
+   
   if (error) throw new Error(error.message);
   return data;
 }
